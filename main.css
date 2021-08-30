@@ -1,0 +1,142 @@
+/* VARIABLES */
+:root {
+    --bg-lightblue-color: #4f5d756c;
+    --bg-color: #2d3142;
+    --selected-color: #f97e49;
+    --available-color: #545661d4; 
+    --occupied-color: #ffffff; 
+    --font-color: #ffffff;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    color: var(--font-color);
+}
+body {
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin: 0 2rem;
+}
+.mainTitle {
+    font-weight: 500;
+    margin-bottom: 3.5rem;
+}
+
+
+/* MOVIE SELECTOR */
+.screenContainer, .movieSelectorSection, .availabilitySection, .seatBookingSection {
+    width: 100%;
+    margin-bottom: 3rem;
+}
+.movieSelectorSection {
+    max-width: 50rem;
+}
+.movieSelector {
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+}
+.pickAMovie {
+    padding: 0.2rem 0;
+    font-weight: 200;
+}
+.selectForm {
+    padding: 0.2rem 0;
+    outline: none;
+    width: 60%;
+    border-radius: 1rem;
+}
+.option {
+    color: rgba(0, 0, 0, 0.79);;
+}
+.ticketCostBox {
+    font-weight: 600;
+    background-color: var(--font-color);
+    color: rgba(0, 0, 0, 0.79);
+    padding: 0.2rem 0.75rem;
+    border-radius: 1rem;
+}
+
+/* AVAILABILITY SECTION */
+.availabilitySection {
+    background-color: var(--bg-lightblue-color);
+    border-radius: 0.75rem;
+    max-width: 50rem;
+}
+.availabilityList  {
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style-type: none;
+    align-items: center;
+}
+.list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.seat {
+    border-top-left-radius: 1.5rem ;
+    border-top-right-radius: 1.5rem;
+    background-color: var(--font-color);
+    width: 1.5rem;
+    height: 1.2rem;
+    margin: 0.5rem;
+}
+.none {
+    background-color: var(--bg-color);
+    width: 1.5rem;
+    height: 1.2rem;
+    margin: 0.25rem 0.5rem;
+}
+
+
+/* SEAT BOOKING SECTION */
+.screenContainer {
+    max-width: 30rem;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+}
+.screen {
+    background-color: var(--font-color);
+    margin: 0 auto;
+    width: 90%;
+    height: 7.5rem;
+    box-shadow: 0 0.1rem 0.5rem rgba(255, 255, 255, 0.7);
+}
+.seatsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 30rem;
+    margin: 0 auto;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.available {
+    background-color: var(--available-color);
+}
+.selected {
+    background-color: var(--selected-color);
+}
+.occupied {
+    background-color: var(--occupied-color);
+}
+
+/* PARAGRAPH */
+.text {
+    margin-bottom: 3rem;
+}
+span {
+    color: var(--selected-color);
+}
+
+/* MEDIA QUERIES */
