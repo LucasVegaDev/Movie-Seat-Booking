@@ -34,8 +34,6 @@ body {
 }
 .movieSelectorSection {
     max-width: 50rem;
-}
-.movieSelector {
     display: flex;
     flex-direction:row;
     justify-content: space-between;
@@ -43,22 +41,27 @@ body {
 .pickAMovie {
     padding: 0.2rem 0;
     font-weight: 200;
+    font-size: 1rem;
 }
-.selectForm {
-    padding: 0.2rem 0;
+.select {
+    border: none;
+    font-size: 1rem;
+    font-weight: 300;
+    color: black;
+    padding: 0.2rem 1rem;
     outline: none;
     width: 60%;
     border-radius: 1rem;
 }
-.option {
-    color: rgba(0, 0, 0, 0.79);;
-}
 .ticketCostBox {
-    font-weight: 600;
+    font-weight: 300;
     background-color: var(--font-color);
     color: rgba(0, 0, 0, 0.79);
     padding: 0.2rem 0.75rem;
     border-radius: 1rem;
+}
+.option {
+    
 }
 
 /* AVAILABILITY SECTION */
@@ -103,6 +106,7 @@ body {
     margin-bottom: 3rem;
 }
 .screen {
+    border-radius: 0.2rem;
     background-color: var(--font-color);
     margin: 0 auto;
     width: 90%;
@@ -133,10 +137,105 @@ body {
 
 /* PARAGRAPH */
 .text {
+    font-size: 0.85rem;
     margin-bottom: 3rem;
 }
 span {
     color: var(--selected-color);
 }
 
+
+
 /* MEDIA QUERIES */
+@media screen and (max-width: 470px) {
+  .mainTitle {
+      text-align: center;
+      line-height: 2.25rem;
+  }
+  /* MOVIE SELECTOR SECTION */
+  .movieSelectorSection {
+      align-items: center;
+  }
+  .pickAMovie {
+      line-height: 1.25rem;
+      width: 20%;
+  }
+  .select {
+      width: 50%;
+  }
+  .select, .ticketCostBox {
+      padding: 0.5rem 0.5rem;
+  }
+  /* SEATS */
+  .seat, .none {
+    margin: 0.25rem;
+  }
+  .text {
+    text-align: center;
+  }
+}
+
+
+@media screen and (max-width: 370px) {
+/* MOVIE SELECTION SECTION */
+.movieSelectorSection {
+    flex-wrap: wrap;
+}
+.pickAMovie {
+    margin-bottom: 0.5rem;
+    padding: 0 0.75rem;
+    display: inline-block;
+    width: 100%;
+}
+.select {
+    width: 75% ;
+}
+.ticketCostBox {
+    text-align: center;
+    display: block;
+    width: 15%
+}
+/* AVAILABILITY SECTION */
+.availabilityList {
+    margin-block: 0.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.list {
+    margin-left: 0.5rem;
+    align-items: center;
+}
+small {
+    margin-left: 0.5rem;
+}
+
+/* SEATS */
+.seat, .none {
+    width: 1rem;
+    height: 1rem;
+}
+}
+
+
+@media screen and (max-width: 300px) {
+    .mainTitle {
+        font-size: 1.75rem;
+    } 
+    
+    .seat, .none {
+        width: 0.75rem;
+        height: 0.75rem;
+    }
+    .pickAMovie {
+        font-size: 0.9rem;
+    }
+    .select {
+        font-size: 0.9rem;
+        width: 72.5%;
+    }
+    .ticketCostBox {
+        width: 15%;
+        font-size: 0.9rem;
+    }
+}
