@@ -1,1 +1,1 @@
-# Movie-Seat-Booking
+This is the second project of the #20ProjectsChallenge, a challenge I found on Twitter. Despite that perhaps some of them are quite basic, I thought it would be interesting to develop them in order to keep practicing and  facing new problems to solve.
