@@ -3,9 +3,9 @@
     --bg-lightblue-color: #4f5d756c;
     --bg-color: #2d3142;
     --selected-color: #f97e49;
-    --available-color: #545661d4; 
-    --occupied-color: #ffffff; 
-    --font-color: #ffffff;
+    --occupied-color: #545661d4; 
+    --available-color: #ffffff; 
+    --font-color: #ffffffde;
 }
 
 * {
@@ -33,36 +33,46 @@ body {
     margin-bottom: 3rem;
 }
 .movieSelectorSection {
+    padding: 0.2rem;
+    background-color: var(--bg-lightblue-color);
+    border-radius: 1rem;
     max-width: 50rem;
     display: flex;
     flex-direction:row;
     justify-content: space-between;
+    width: 100%;
 }
 .pickAMovie {
-    padding: 0.2rem 0;
+    padding: 0.2rem 0.5rem ;
     font-weight: 200;
     font-size: 1rem;
 }
+.movieAndCostWrapper {
+    align-items: left;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+
+}
 .select {
+    background-color: var(--font-color);
     border: none;
     font-size: 1rem;
     font-weight: 300;
     color: black;
     padding: 0.2rem 1rem;
     outline: none;
-    width: 60%;
-    border-radius: 1rem;
-}
-.ticketCostBox {
-    font-weight: 300;
-    background-color: var(--font-color);
-    color: rgba(0, 0, 0, 0.79);
-    padding: 0.2rem 0.75rem;
-    border-radius: 1rem;
-}
-.option {
+    width: 100%;
     
+    border-radius: 1rem;
 }
+.moviePrice {
+    margin-right: 0;
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.79);
+
+}
+
 
 /* AVAILABILITY SECTION */
 .availabilitySection {
@@ -84,6 +94,7 @@ body {
     align-items: center;
 }
 .seat {
+    cursor: pointer;
     border-top-left-radius: 1.5rem ;
     border-top-right-radius: 1.5rem;
     background-color: var(--font-color);
@@ -132,7 +143,11 @@ body {
     background-color: var(--selected-color);
 }
 .occupied {
+    cursor:initial;
     background-color: var(--occupied-color);
+}
+.seatExample {  
+    cursor:initial;
 }
 
 /* PARAGRAPH */
@@ -140,7 +155,7 @@ body {
     font-size: 0.85rem;
     margin-bottom: 3rem;
 }
-span {
+.count, .total {
     color: var(--selected-color);
 }
 
@@ -219,23 +234,23 @@ small {
 
 
 @media screen and (max-width: 300px) {
-    .mainTitle {
-        font-size: 1.75rem;
-    } 
-    
-    .seat, .none {
-        width: 0.75rem;
-        height: 0.75rem;
-    }
-    .pickAMovie {
-        font-size: 0.9rem;
-    }
-    .select {
-        font-size: 0.9rem;
-        width: 72.5%;
-    }
-    .ticketCostBox {
-        width: 15%;
-        font-size: 0.9rem;
-    }
+.mainTitle {
+    font-size: 1.75rem;
+} 
+
+.seat, .none {
+    width: 0.75rem;
+    height: 0.75rem;
+}
+.pickAMovie {
+    font-size: 0.9rem;
+}
+.select {
+    font-size: 0.9rem;
+    width: 72.5%;
+}
+.ticketCostBox {
+    width: 15%;
+    font-size: 0.9rem;
+}
 }
